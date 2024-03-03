@@ -50,7 +50,8 @@ class BoardController: NSObject,
   // Tip: Take a look at how resetBoard is implemented above. The only difference is that you don't want to change the settings
   func resetBoardWithCurrentSettings() {
     // START YOUR CODE HERE
-    // ...
+      numTimesGuessed = 0
+      collectionView.reloadData()
     // END YOUR CODE HERE
   }
   
@@ -93,7 +94,7 @@ class BoardController: NSObject,
     // START YOUR CODE HERE
       if let rawTheme = settings[kWordThemeKey] as? String,
          let theme = WordTheme(rawValue: rawTheme) {
-          theme = rawTheme
+          goalWord = WordGenerator.generateGoalWord(with: theme)
       }
     // END YOUR CODE HERE
   }
@@ -104,7 +105,9 @@ class BoardController: NSObject,
   // Checkpoint: Correctly implementing this function should change the goal word each time the user inputs an entire row of letters
   private func applyIsAlienWordleSettings(with settings: [String: Any]) {
     // START YOUR CODE HERE
-    // ...
+      if let alienWordle = settings[kIsAlienWordleKey] as? Bool {
+          isAlienWordle = alienWordle
+      }
     // START YOUR CODE HERE
   }
 }
