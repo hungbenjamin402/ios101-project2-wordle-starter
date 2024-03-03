@@ -22,7 +22,7 @@ The following **optional** features are implemented:
 
 ## Video Walkthrough
 
-[Demonstration Video]]https://youtu.be/_zCqo3e0ODw)
+[Demonstration Video]](https://youtu.be/_zCqo3e0ODw)
 
 ## Notes
 
